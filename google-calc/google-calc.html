@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="google-style.css">
+    <script src="google.functions.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div class="display">
+                    <input type="text" id="log" disabled>
+                </div>
+                <div class="display">
+                    <input type="text" id="display" disabled>
+                </div>
+                <div class="buttons">
+                    <div>
+                        <input type="button" value="AC" onclick="clearScreen() " class="clean operator">
+                        <input type="button" value="<=" onclick="deleteLastValue() "  class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="updateDisplay('7') ">
+                        <input type="button" value="8" onclick="updateDisplay('8') ">
+                        <input type="button" value="9" onclick="updateDisplay('9') ">
+                        <input type="button" value="/" onclick="updateDisplay('/') " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="updateDisplay('4') ">
+                        <input type="button" value="5" onclick="updateDisplay('5') ">
+                        <input type="button" value="6" onclick="updateDisplay('6') ">
+                        <input type="button" value="*" onclick="updateDisplay('*') " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="updateDisplay('1') ">
+                        <input type="button" value="2" onclick="updateDisplay('2') ">
+                        <input type="button" value="3" onclick="updateDisplay('3') ">
+                        <input type="button" value="-" onclick="updateDisplay('-') " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="." onclick="updateDisplay('.') ">
+                        <input type="button" value="0" onclick="updateDisplay('0') ">
+                        <input type="button" value="=" onclick="equal()" class="equal operator">
+                        <input type="button" value="+" onclick="updateDisplay('+') " class="operator">
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
