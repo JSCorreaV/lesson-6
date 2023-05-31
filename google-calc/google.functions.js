@@ -44,8 +44,6 @@ function updateDisplay(digit){
     else {
         document.getElementById("display").value = document.getElementById("display").value + digit;
     }
-
-
 }
 
 function deleteLastValue(){
@@ -54,7 +52,6 @@ function deleteLastValue(){
 
 function equal(){
     document.getElementById("log").value = `${previousValue} ${operation} ${document.getElementById("display").value}`;
-
     if (operation==ADD){
         document.getElementById("display").value = Number(previousValue) + Number(document.getElementById("display").value);
     }
@@ -67,7 +64,6 @@ function equal(){
     if (operation==DIVIDE){
         document.getElementById("display").value = Number(previousValue) / Number(document.getElementById("display").value);
     }
-    //document.getElementById("display").value = 
 }
 
 
