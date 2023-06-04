@@ -25,6 +25,7 @@ function clearScreen(){
     document.getElementById("display").value = "";
     previousValue = null;
     operation = null;
+    document.getElementById("log").value = "";
 }
 
 /*
@@ -42,8 +43,14 @@ function updateDisplay(digit){
         document.getElementById("display").value = digit;
     }
     else {
-        document.getElementById("display").value = document.getElementById("display").value + digit;
+        if(isOperation(document.getElementById("display").value)!=null){
+            document.getElementById("display").value = digit;
+        }
+        else{
+            document.getElementById("display").value = document.getElementById("display").value + digit;
+        }
     }
+    console.log(`${previousValue} ${operation} ${document.getElementById("display").value}`);
 }
 
 function deleteLastValue(){
