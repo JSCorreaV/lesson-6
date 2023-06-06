@@ -42,6 +42,7 @@ function updateDisplay(digit){
         document.getElementById("display").value = digit;
     }
     else {
+        document.getElementById("display").value="";
         document.getElementById("display").value = document.getElementById("display").value + digit;
     }
 }
@@ -65,11 +66,6 @@ function equal(){
         document.getElementById("display").value = Number(previousValue) / Number(document.getElementById("display").value);
     }
 }
-
-
-
-
-
 
 
 /*function sum(a, b){
