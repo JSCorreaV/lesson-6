@@ -32,17 +32,18 @@ Si previousvalue esta vacio y me envian un digito: concateno
 Si me envian una operacion: guarde primer numero y operacion, muestre operacion
 Si previousvalue NO esta vacio y operacion no esta vacia: concateno
 */
-function updateDisplay(digit){
-    if (previousValue==undefined && isOperation(digit)==null){
-        document.getElementById("display").value = document.getElementById("display").value + digit;
+function updateDisplay(character){
+    if (previousValue==undefined && isOperation(character)==null){
+        document.getElementById("display").value = document.getElementById("display").value + character;
     }
-    else if (isOperation(digit)!=null){
+    else if (isOperation(character)!=null){
         previousValue = document.getElementById("display").value;
-        operation = digit;
-        document.getElementById("display").value = digit;
+        operation = character;
+        document.getElementById("display").value = character;
     }
     else {
-        document.getElementById("display").value = document.getElementById("display").value + digit;
+        document.getElementById("display").value= "";
+        document.getElementById("display").value = document.getElementById("display").value + character;
     }
 }
 
