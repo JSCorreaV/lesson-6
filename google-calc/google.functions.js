@@ -5,17 +5,17 @@ const SUBSTRACT = "-";
 const MULTIPLY = "*";
 const DIVIDE = "/";
 
-function isOperation(value){
-    if (value=="+"){
+function isOperation(digit){
+    if (digit=="+"){
         return ADD;
     }
-    if (value=="-"){
+    if (digit=="-"){
         return SUBSTRACT;
     }
-    if (value=="*"){
+    if (digit=="*"){
         return MULTIPLY;
     }
-    if (value=="/"){
+    if (digit=="/"){
         return DIVIDE;
     }
     return null;
@@ -33,12 +33,12 @@ Si me envian una operacion: guarde primer numero y operacion, muestre operacion
 Si previousvalue NO esta vacio y operacion no esta vacia: concateno
 */
 function updateDisplay(digit){
-    if (previousValue==undefined && isOperation(digit)==null){
-        document.getElementById("display").value = document.getElementById("display").value + digit;
-    }
-    else if (isOperation(digit)!=null){
+    if (isOperation(digit)!=null){
         previousValue = document.getElementById("display").value;
+        document.getElementById("display").value = digit;
         operation = digit;
+    } 
+    else if (isOperation(document.getElementById("display").value)!=null){
         document.getElementById("display").value = digit;
     }
     else {
